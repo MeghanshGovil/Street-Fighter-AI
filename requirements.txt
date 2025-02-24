@@ -1,0 +1,6 @@
+gym
+torch
+numpy
+opencv-python
+stable-baselines3
+retro
