@@ -1,54 +1,62 @@
 # Street-Fighter-AI
-Overview
 
-Street-Fighter-AI is a reinforcement learning-based system that trains AI agents to play Street Fighter II: Special Champion Edition. The system leverages OpenAI's Gym Retro environment, advanced RL algorithms, and image processing techniques to enable an AI to master the game.
+## Overview
 
-Features
+**Street-Fighter-AI** is a deep reinforcement learning (RL) project that trains an AI agent to play **Street Fighter II: Special Champion Edition**. Using **OpenAI Gym Retro**, **Stable-Baselines3**, and **deep learning techniques**, this project develops an intelligent AI capable of mastering the game through self-play and experience.
 
-✅ Custom Gym Environment – Seamless integration with Gym Retro for a realistic gaming experience.✅ Deep Reinforcement Learning Agents – Implements DQN and PPO for effective training.✅ Efficient Training Pipeline – Optimized preprocessing and training for enhanced performance.✅ Performance Monitoring – Tracks model progress with TensorBoard visualization.✅ High Accuracy & Adaptability – Achieves 85% win rate, with a 50% improvement in training efficiency over baseline models.
+## Features
 
-Tech Stack
+✅ **Custom Gym Environment** – Seamless integration with Gym Retro for an authentic gaming experience.  
+✅ **Deep Reinforcement Learning Models** – Implements **Proximal Policy Optimization (PPO)** for efficient training.  
+✅ **Optimized Training Pipeline** – Frame processing and reward tuning for faster convergence.  
+✅ **Performance Monitoring** – Track model improvements using **TensorBoard** and **logging tools**.  
+✅ **High Win Rate & Efficiency** – Achieves **85% win rate**, with **50% improvement in training efficiency** over baseline models.  
 
-Python – Core programming language.
+## Tech Stack
 
-OpenAI Gym Retro – Provides a retro gaming environment.
+- **Python** – Core programming language.
+- **OpenAI Gym Retro** – Provides a retro gaming environment.
+- **Stable-Baselines3** – Implements reinforcement learning algorithms.
+- **OpenCV** – Used for preprocessing game frames.
+- **TensorFlow & PyTorch** – Power the deep learning models.
+- **Jupyter Notebook** – Interactive training and debugging.
 
-Stable Baselines3 – Implements RL algorithms like DQN and PPO.
+## Installation
 
-OpenCV – Used for preprocessing game frames.
+1. **Clone the repository:**
 
-TensorFlow & PyTorch – Power the deep learning models.
+   ```bash
+   git clone https://github.com/nicknochnack/StreetFighterRL.git
+   cd StreetFighterRL
+   ```
 
-Jupyter Notebook – Enables interactive training and debugging.
+2. **Create a virtual environment and install dependencies:**
 
-Installation
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   pip install -r requirements.txt
+   ```
 
-Clone the repository:
+3. **Install Gym Retro and set up the game ROM:**
 
-git clone https://github.com/nicknochnack/StreetFighterRL.git
-cd StreetFighterRL
+   ```bash
+   pip install gym-retro
+   ```
+   - Follow the [Gym Retro documentation](https://retro.readthedocs.io/en/latest/getting_started.html) to import the Street Fighter II ROM.
 
-Create a virtual environment and install dependencies:
+4. **Run the training script:**
 
-python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-pip install -r requirements.txt
+   ```bash
+   python src/train.py
+   ```
 
-Install Gym Retro and set up the game ROM:
+## Example Output
 
-pip install gym-retro
+### AI Learning to Fight in Street Fighter II
 
-Follow the Gym Retro documentation to import the Street Fighter II ROM.
+The AI agent progressively improves its fighting skills over multiple training sessions, adapting to different opponents and attack strategies.
 
-Run the training script:
-
-python src/train.py
-
-Example Output
-
-AI Learning to Fight in Street Fighter II
-
-The AI agent progressively learns from experience, improving its performance over multiple training sessions.
 
 ### Fine Tuning the Model
 ![Image Alt](https://github.com/MeghanshGovil/Street-Fighter-AI/blob/main/Images/Fine%20Tuning%20Model.png)
@@ -60,12 +68,22 @@ The AI agent progressively learns from experience, improving its performance ove
 ### Game Running
 ![Image Alt](https://github.com/MeghanshGovil/Street-Fighter-AI/blob/main/Images/Model%20Running.png)
 
+📌 **Win Rate**: **85%**  
+📌 **Training Efficiency Improvement**: **50%**  
+📌 **Action Prediction Accuracy**: **92%**  
+📌 **Frame Processing Optimization**: **40% faster**  
 
-📌 Win Rate: 85%📌 Training Efficiency Improvement: 50%📌 Action Prediction Accuracy: 92%📌 Frame Processing Optimization: 40% faster
+## How It Works
 
-Contributing
+1. **Frame Preprocessing** – Converts raw gameplay frames into grayscale, resizes them, and applies frame difference techniques for better feature extraction.
+2. **Reward Engineering** – Assigns optimized rewards for successful attacks, blocking, and winning rounds.
+3. **PPO Training** – Uses reinforcement learning to refine the AI agent’s fighting strategy over time.
+4. **Evaluation & Testing** – Measures AI performance against baseline models and refines hyperparameters.
 
-Contributions are welcome! Please fork the repository and submit a pull request with your improvements.
+## Contributing
 
-🎮 StreetFighterRL – Training AI to master the arcade world!
+Contributions are welcome! If you’d like to improve this project, fork the repository and submit a pull request.
 
+---
+
+🎮 **StreetFighterRL** – Training AI to dominate the arcade battle arena!
